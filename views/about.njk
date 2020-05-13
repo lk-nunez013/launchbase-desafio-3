@@ -1,0 +1,53 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <div class="wrapper">
+        <div class="content">
+            <h2>
+                As melhores tecnologias em programação, direto ao ponto e do jeito certo.
+            </h2>
+            <br>
+            <p>
+                No meio de tanta informação e da quantidade de ferramentas que surgem todos os dias, você precisa de alguém que te leve na direção certa.
+            </p>
+        </div>
+        <div class="img-wrapper">
+            <img src="https://rocketseat.com.br/static/images/update/melhores-tecnologias.svg" alt="Imersão">
+        </div>
+    </div>
+
+    <div class="wrapper-curso">
+        <h2>Conheça nossos cursos</h2>
+        <div class="info-section">
+            <div class="img-content">
+                <img src="https://rocketseat.com.br/static/images/update/trofeu-home.svg" alt="">
+            </div>
+            <div class="info-content">
+                <h3>As mesmas tecnologias utilizadas por empresas como:
+                </h3>
+                <h3 class="opacity">Nubank, Netflix, Uber, Instagram e Airbnb</h3>
+                <br>
+                <p>
+                    Imagine você dominando as mesmas tecnologias adotadas pelos melhores times do mundo, construindo aplicações de alta performance e se destacando entre os maiores programadores.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section class="cursos">
+        {% for item in items%}
+            <div class="card-curso" id="{{item.id}}">
+                <img src="https://skylab.rocketseat.com.br/static/{{item.url_img}}" alt="{{item.curso}}">
+                <div class="card-info">
+                    <div class="card-description">
+                        <p>
+                            <strong>{{item.destaque}}</strong>{{item.description}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+    <script src="/script.js"></script>
+{% endblock content %}

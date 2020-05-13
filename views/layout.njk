@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% block head %}
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Rocket</title>
+            <link rel="stylesheet" href="/style.css">
+        </head>
+
+    {% endblock %}
+
+    <body>
+        <header>
+            <nav>
+                <img src="https://skylab.rocketseat.com.br/static/0ae02df14343f202953af82f30a1581b.svg" alt="">
+            </nav>
+        </header>
+
+        {% block content %}{% endblock %}
+
+        <footer>
+
+            <p>
+                Rocketseat © 2020 - Todos os direitos reservados
+            </p>
+
+        </footer>
+
+        <script src="/script.js"></script>
+
+    </body>
+</html>

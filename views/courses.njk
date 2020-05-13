@@ -1,0 +1,24 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Curso - {{item.curso}}</title>
+    <link rel="stylesheet" href="/style.css">
+
+{% endblock head %}
+
+{% block content %}
+    <div class="wrapper-course">
+        <img src="https://skylab.rocketseat.com.br/static/{{item.url_img}}" alt="">        
+        <p><strong>{{item.destaque}}</strong> {{item.description}} </p>
+            <div class="about-course">
+                <h2>Sobre o curso</h2>
+                
+                <p>{{item.about}}</p>
+
+                <h3>Instrutor - <strong>{{item.instrutor}}</strong></h3>
+
+                <a href="https://rocketseat.com.br/{{item.curso}}" target="_blank">Inscreva-se</a>
+            </div>
+    </div>
+
+{% endblock content %}
